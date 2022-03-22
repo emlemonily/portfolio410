@@ -1,0 +1,151 @@
+#title {
+    position: relative;
+    top:-10px;
+}
+
+#title h1{
+    font-family: 'Oleo Script', cursive; 'Brush Script MT', cursive;
+    text-align: center;
+    font-size: 50px;
+    font-weight: normal;
+    padding-left: 50px;
+}
+
+#title img {
+    padding-left: 10px;
+}
+
+/* Overall navbar */
+nav {
+    /* Centers all lists in the navbar */
+    text-align: center;
+
+    /* Makes text in the navbar unselectable */
+    user-select: none;
+}
+
+/* Navigation box and surrounding parts */
+nav li {
+    display: inline-block;
+    padding: 10px;
+}
+
+/* Inside the navigation boxes/links */
+nav li a{
+    color: #000000;
+    text-align: center;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: #FFAE9F;
+    border-radius: 5px;
+    outline-style: solid;
+    outline-color: #FFC2BE;
+    outline-width: 8px;
+
+    /* Sets size of the box around the anchors */
+    padding: 1em 3em;
+}
+
+/* Selected navbar box color */
+nav a.active {
+    background-color: #6DC49E;
+    color: #ffffff;
+}
+
+nav li a:hover{
+    background-color: #E5DC76;
+    color: #000000;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 165px;
+    padding: 26px 0px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 20px 30px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #E5DC76;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Selected navbar dropdown box color */
+.dropdown:hover .dropbutton {
+    background-color: #6DC49E;
+}
+
+.headshot {
+    border:10px solid #E5DC76;
+    border-radius:5px;
+}
+
+.headshot2 {
+    border:10px solid #6CB3BE;
+    border-radius:5px;
+}
+
+h2 {
+    font-family: 'Oleo Script', cursive; 'Brush Script MT', cursive;
+}
+
+#container{
+    /* Prevents elements from getting messed up when you zoom out/in */
+    max-width: 63em;
+    min-width: 63em;
+    position: absolute;
+}
+
+#content {
+    display: grid;
+    /* Padding of all of #content */
+    padding: 2em 7em 2em 11em;
+
+    /* Respective sizes of columns */
+    grid-template-columns: 48% 52%;
+
+    /* Gap between columns */
+    grid-column-gap: 1.5em;
+
+    /* Gap between rows */
+    grid-row-gap: 2em;
+
+    /* Size of rows, minimum size is 100px and will stretch to include text */
+    grid-auto-rows: minmax (100px, auto);
+}
+
+/*
+.logo2 {
+    position: absolute;
+    top: 36em;
+    right: 1em;
+} */
+
+body {
+    background-color: #FFD3D0;
+    font-family: 'Lato', sans-serif; 'Helvetica', sans-serif;
+    font-size: 20px;
+}
+
+#footer {
+    background-color: #FFAE9F;
+    text-align: center;
+    height: 1em;
+    padding: 1.5em;
+    font-weight: bold;
+}
