@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Emily Paterson's Portfolio Site">
+    <meta name="keywords" content="UX, writing, design, content creator">
+
     <title>Projects</title>
 
     <link rel="stylesheet" href="index.css">
@@ -11,6 +14,56 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="title">
+        <h1>Emily Paterson <img src="images/logo.png" alt="Emily Paterson's Logo" height="70" width="75"></h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Index</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li class="dropdown">
+                <a class="active" href="#projects"> Projects</a>
+                    <div class="dropdown-content">
+                        <a href="ux.html">UX</a>
+                        <a href="visuals.html">Visuals</a>
+                        <a href="writing.html">Writing</a>
+                    </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="project-container pink-bg">
+        <div class="ux-img ">
+            <a href="ux.html">
+                <img src="images/ux icon.png" alt="UX Icon" height="100" width="105">
+            </a>
+        </div>  
+        <div class="ux-txt pink-bg">
+            <h>UX</p>
+            <p>When it comes to user experience design, I love the process of organizing and redesigning information to create the easiest, most functional version of technology for the user.</p>
+        </div>
 
+        <div class="visuals-img pink-bg">
+            <a href="visuals.html">
+                <img src="images/visuals icon.png" alt="Visuals Icon" height="100" width="105">
+            </a>
+        </div>
+        <div class="visuals-txt pink-bg">
+            <p>Visuals</p>
+            <p>I enjoy creating art in all forms, whether it’s digital or physical. My visual style tends to be colorful, multilayered, and story-driven.</p>
+        </div>
+        
+        <div class="writing-img pink-bg">
+            <a href="writing.html">
+                <img src="images/writing icon.png" alt="Writing Icon" height="100" width="105">
+            </a>
+        </div>
+        <div class="writing-txt pink-bg">
+            <p>Writing</p>
+            <p>To me, writing has always been an inescapable part of my life. It is the medium I feel most comfortable expressing my thoughts into words. </p>
+        </div>
+      </div>
+<div id="footer">
+    Copyright &copy; 2022 Emily Paterson
+</div>
 </body>
 </html>

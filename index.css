@@ -1,3 +1,8 @@
+
+html{
+    /*Removes horizontal scrollbar */
+    overflow-x: hidden;
+}
 #title {
     position: relative;
     top:-10px;
@@ -9,6 +14,11 @@
     font-size: 50px;
     font-weight: normal;
     padding-left: 50px;
+    padding-top:10px;
+}
+
+h1 {
+    margin:0;
 }
 
 #title img {
@@ -63,6 +73,7 @@ nav li a:hover{
 }
 
 .dropdown-content {
+    border-top: none;
     display: none;
     position: absolute;
     min-width: 165px;
@@ -108,7 +119,8 @@ h2 {
     /* Prevents elements from getting messed up when you zoom out/in */
     max-width: 63em;
     min-width: 63em;
-    position: absolute;
+    position: relative;
+    margin: 0 auto;
 }
 
 #content {
@@ -129,12 +141,50 @@ h2 {
     grid-auto-rows: minmax (100px, auto);
 }
 
-/*
+#content-projects {
+    display: grid;
+    padding: 2em 7em 2em 11em;
+}
+
+#content-case-studies {
+    display: grid;
+    padding: 20px 7em 2em 11em;
+    grid-row-gap: 2em;
+    justify-content: center;
+}
+
+.title-case-studies {
+    text-align: center;
+    font-size: 20px;
+    font-weight: normal;
+    padding-left: 0px;
+}
+
+.header-case-studies {
+    background: #E5DC76;
+    border: 10px solid #6CB3BE;
+    border-radius:5px;
+    display: inline-block;
+    /* Left right padding */
+    padding-left: 20px;
+    padding-right: 20px;
+
+    /* Fits to content's size*/
+    height: fit-content;
+    width: fit-content;
+}
+
+
+
+
+
 .logo2 {
     position: absolute;
-    top: 36em;
+    top: 25em;
     right: 1em;
-} */
+}
+
+
 
 body {
     background-color: #FFD3D0;
@@ -145,7 +195,71 @@ body {
 #footer {
     background-color: #FFAE9F;
     text-align: center;
-    height: 1em;
-    padding: 1.5em;
+    height: fit-content;
+    width: 100vw;
+    padding: 1em;
     font-weight: bold;
+    position: fixed;
+    top: -1em;
+    margin:0 auto;
+    bottom:0;
 }
+
+/*Alternating between three different color schemes*/
+
+div.alt-colors:nth-of-type(3n+1){
+    background: #E5DC76;
+    border: 10px solid #6CB3BE;
+}
+div.alt-colors:nth-of-type(3n+2){
+   background: #6DC49E;
+   border: 10px solid #E5DC76;
+}
+div.alt-colors:nth-of-type(3n+3){
+    background: #6cb3be;
+    border: 10px solid #6DC49E;
+}
+
+.row-case-studies {
+    margin-bottom:50px;
+}
+
+
+/*project page grid system */
+
+.project-container {  
+    margin: 0 auto;
+    display: grid;
+        grid-template-columns: 0.3fr 1.4fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 1em 0px;
+        grid-auto-flow: row;
+        justify-items: stretch;
+        grid-template-areas:
+          "ux-img ux-txt"
+          "visuals-img visuals-txt"
+          "writing-img writing-txt";
+        padding-inline-start: 150px;
+        padding-inline-end: 150px;
+        padding-top:2em;
+      }
+      
+      .ux-img { grid-area: ux-img; }
+      
+      .ux-txt { grid-area: ux-txt; }
+      
+      .visuals-img { grid-area: visuals-img; }
+      
+      .visuals-txt { grid-area: visuals-txt; }
+      
+      .writing-img { grid-area: writing-img; }
+      
+      .writing-txt { grid-area: writing-txt; }
+      
+
+  }
+
+.pink-bg {
+    background: #FFAE9F;
+}
+  
