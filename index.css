@@ -119,8 +119,11 @@ h2 {
     /* Prevents elements from getting messed up when you zoom out/in */
     max-width: 63em;
     min-width: 63em;
+    /*reason resume page is spaced*/
+    min-height: 100vh;
     position: relative;
     margin: 0 auto;
+    margin-bottom: 2.5rem;
 }
 
 #content {
@@ -174,9 +177,16 @@ h2 {
     width: fit-content;
 }
 
+.row-case-studies {
+    background: #FFAE9F;
+    border: 10px solid #6CB3BE;
+    border-radius:5px;
+    padding: 1em;
+}
 
-
-
+.iframe-content {
+    text-align: center;
+}
 
 .logo2 {
     position: absolute;
@@ -192,20 +202,17 @@ body {
     font-size: 20px;
 }
 
+
 #footer {
     background-color: #FFAE9F;
     text-align: center;
-    height: fit-content;
-    width: 100vw;
-    padding: 1em;
-    font-weight: bold;
-    position: fixed;
-    top: -1em;
-    margin:0 auto;
-    bottom:0;
+    position: absolute;
+    margin-top: 1em;
+    width: 100%;
+    height: 2.5rem;
 }
 
-/*Alternating between three different color schemes*/
+/*Alternating between three different color schemes in the Headers*/
 
 div.alt-colors:nth-of-type(3n+1){
     background: #E5DC76;
@@ -220,19 +227,32 @@ div.alt-colors:nth-of-type(3n+3){
     border: 10px solid #6DC49E;
 }
 
-.row-case-studies {
-    margin-bottom:50px;
+/*Alternating between three different color schemes in the Content boxes*/
+div.alt-colors2:nth-of-type(3n+1){
+    background: #FFAE9F;
+    border: 10px solid #6DC49E;
+}
+div.alt-colors2:nth-of-type(3n+2){
+    background: #FFAE9F;
+    border: 10px solid #6CB3BE;
+}
+div.alt-colors2:nth-of-type(3n+3){
+    background: #FFAE9F;
+    border: 10px solid #E5DC76;
 }
 
 
-/*project page grid system */
+.row-case-studies {
+    margin-bottom:30px;
+}  
 
-.project-container {  
+/*project page grid system */
+.project-container {
     margin: 0 auto;
     display: grid;
-        grid-template-columns: 0.3fr 1.4fr;
+        grid-template-columns: 0.15fr 1.4fr;
         grid-template-rows: 1fr 1fr 1fr;
-        gap: 1em 0px;
+        gap: em 0px;
         grid-auto-flow: row;
         justify-items: stretch;
         grid-template-areas:
@@ -243,23 +263,53 @@ div.alt-colors:nth-of-type(3n+3){
         padding-inline-end: 150px;
         padding-top:2em;
       }
-      
-      .ux-img { grid-area: ux-img; }
-      
-      .ux-txt { grid-area: ux-txt; }
-      
-      .visuals-img { grid-area: visuals-img; }
-      
-      .visuals-txt { grid-area: visuals-txt; }
-      
-      .writing-img { grid-area: writing-img; }
-      
-      .writing-txt { grid-area: writing-txt; }
-      
 
+      .ux-img { 
+            grid-area: ux-img;
+            padding-top: 3em;
+        }
+
+      .ux-txt { 
+            grid-area: ux-txt;
+            background-color:#FFAE9F;
+            padding:1em;
+            margin: 1em;
+            border: 10px solid #6CB3BE;
+            border-radius:5px;
+        }
+
+      .visuals-img { 
+          grid-area: visuals-img;
+          padding-top: 3em;
+
+        }
+
+      .visuals-txt { 
+          grid-area: visuals-txt;
+          background-color:#FFAE9F;
+            padding:1em;
+            margin: 1em;
+            border: 10px solid #6CB3BE;
+            border-radius:5px; 
+        }
+
+      .writing-img { 
+          grid-area: writing-img; 
+          padding-top: 3em;
+        }
+
+      .writing-txt { 
+          grid-area: writing-txt;
+          background-color:#FFAE9F;
+            padding:1em;
+            margin: 1em;
+            border: 10px solid #6CB3BE;
+            border-radius:5px;
+        }
   }
 
-.pink-bg {
-    background: #FFAE9F;
+  /* Highlight color */
+::selection {
+    color: black;
+    background: #cff27e;
 }
-  
